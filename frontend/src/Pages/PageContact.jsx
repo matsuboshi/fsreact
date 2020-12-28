@@ -29,8 +29,7 @@ export default function PageContact() {
   }, [render]);
 
   const fetchItems = async () => {
-    const url =
-      'http://projetopraticomitsuhikorecode/07%20-%20React_PHP_Boot/backend/getMsg.php';
+    const url = 'http://code/fsreact/backend/getMsg.php';
     const data = await fetch(url);
     const items = await data.json();
     setItems(items);
@@ -40,8 +39,7 @@ export default function PageContact() {
     event.preventDefault();
 
     let formData = new FormData(event.target);
-    const url =
-      'http://projetopraticomitsuhikorecode/07%20-%20React_PHP_Boot/backend/postMsg.php';
+    const url = 'http://code/fsreact/backend/postMsg.php';
     const options = {
       method: 'POST',
       body: formData,
